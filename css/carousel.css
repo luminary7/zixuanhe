@@ -1,0 +1,23 @@
+.carousel-item img {
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+}
+.award{
+    width: 600px;
+    height: 400px;
+}
+
+.carousel_extra{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.carousel-image {
+    width: 600px;
+    height: 450px; /* 设置固定的高度 */
+    object-fit: cover; /* 使用cover裁剪图片以适应*/
+}
+
+
