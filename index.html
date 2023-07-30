@@ -17,7 +17,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Rewall | Home</title>
+    <title>ZixuanHe | Home</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -54,6 +54,7 @@
 <!-- Wrapper All -->
 <div class="rewall_fn_wrapper_all" data-nav-skin="transdark">
 
+
     <!-- Wrapper -->
     <div class="rewall_fn_wrapper">
 
@@ -63,10 +64,10 @@
             <!-- LOGO & HAMBURGER -->
             <div class="logo_hamb">
                 <div class="in">
-                    <div class="menu_logo">
-                        <a href="index.html"><img src="img/logo-light.png" alt=""/></a>
-                    </div>
                     <div class="hamburger hamburger--collapse-r">
+                        <div class="menu_logo">
+                            <img src="/img/logo/logo.png" alt="" />
+                        </div>
                         <div class="hamburger-box">
                             <div class="hamburger-inner"></div>
                         </div>
@@ -83,9 +84,6 @@
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#service">Services</a></li>
                         <li><a href="#publication">Publication</a></li>
-                        <!-- <li><a href="#customer">Customers</a></li>
-                        <li><a href="#blog">News &amp; Tips</a></li>
-                        <li><a href="#contact">Contact</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -402,7 +400,7 @@
             <div class="sidebar_in">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="img/logo.png" alt=""/>
+                        <img src="/img/logo/logo.png" alt="">
                     </a>
                 </div>
                 <div class="navigation">
@@ -421,16 +419,13 @@
                 <div class="copyright">
                     <div class="social">
                         <ul>
-                            <li><a href="#"><img src="svg/social/twitter.svg" alt="" class="fn__svg"/></a></li>
-                            <li><a href="#"><img src="svg/social/facebook.svg" alt="" class="fn__svg"/></a></li>
-                            <li><a href="#"><img src="svg/social/instagram.svg" alt="" class="fn__svg"/></a></li>
-                            <li><a href="#"><img src="svg/social/pinterest.svg" alt="" class="fn__svg"/></a></li>
-                            <!-- <li><a href="#"><img src="svg/social/youtube.svg" alt="" class="fn__svg" /></a></li> -->
+                            <li data-toggle="modal" data-target="#exampleModal"><a style="cursor: pointer"><img src="svg/social/wx.svg" alt="" class="fn__svg"/></a></li>
+                            <li><a href="tel:+8618951396829"><img src="svg/social/mobile.svg" alt="" class="fn__svg"/></a></li>
+                            <li><a href="mailto:zixuanhe921@outlook.com"><img src="svg/social/email.svg" alt="" class="fn__svg"/></a></li>
                         </ul>
                     </div>
                     <div class="desc">
-                        <p>© 2021 Rewall Template<br/>Created by <a href="https://frenify.com/"
-                                                                    target="_blank">Frenify</a></p>
+                        <p>Contact me as above</p>
                     </div>
                 </div>
             </div>
@@ -448,6 +443,25 @@
 
                 <!-- About Section -->
                 <section class="about" id="about">
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <span>
+                                        <img src="/img/contact/wx.jpg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- About Modern Shortcode -->
                     <div class="fn_cs_about_modern">
@@ -475,9 +489,11 @@
                                     <!-- Main Title -->
                                     <div class="main_title">
                                         <h3>ZiXuanHe</h3>
-                                        <p>Founder of <a href="https://frenify.com/" target="_blank">Frenify</a>.
-                                            Professional UI/UX designer and web developer based on London. Sometimes
-                                            works as a freelancer.</p>
+                                        <p>Hello, I’m Zixuan He, a fourth-year student at Nanjing University of Finance
+                                            and Economics majoring in Computer Science and Technology (B.S.), advised by
+                                            <a href="https://xueshu.baidu.com/scholarID/CN-BK73TEKJ">Prof. Lei
+                                                Zhang.</a>
+                                        </p>
                                     </div>
                                     <!-- /Main Title -->
 
@@ -513,7 +529,7 @@
                                 My research interests are in machine learning, deep learning, computer vision,
                                 multimodality, and applications to autonomous driving.
                                 Currently, I am doing research on multimodal field of speech-to-motion in terms of 3d.
-                                Please refer to my <a href="/file/Zixuan_He_CV.pdf">CV</a>. Free to email me if you
+                                Please refer to my <a href="/file/Zixuan_He_CV.pdf"><u>CV</u></a>. Free to email me if you
                                 would like to work together!</p>
                             <p style="color: red;">I am actively looking for Ph.D./RA position, please contact me if you
                                 think I am a good fit.</p>
@@ -559,7 +575,7 @@
                             <span class="line bottom_hover"></span>
                             <span class="line top"></span>
                             <span class="line bottom"></span>
-                            <a href="files/Zixuan_He_CV.pdf" download>
+                            <a href="/file/Zixuan_He_CV.pdf" download>
 								<span class="icon">
 									<img src="svg/inbox.svg" alt="" class="fn__svg"/>
 									<img src="svg/arrow.svg" alt="" class="fn__svg arrow"/>
@@ -753,7 +769,7 @@
                                                         </div>
                                                         <h5>main course:</h5>
                                                         <p>
-                                                            advanced mathematicsI, Advanced MathematicesII<br>
+                                                            Advanced MathematicsI, Advanced MathematicesII<br>
                                                             Discrete Mathematics, Object-Oriented Programming (JAVA)
                                                             (bilingual)<br>
                                                             Statistics, Data Mining, Principles of Computer
@@ -869,7 +885,7 @@
                     <div class="main_title center">
                         <div class="container max880">
                             <h3>Experience</h3>
-                            <p>Below are videos and pictures of some of the competitions in the school's robotics lab
+                            <p>Below are pictures of some of the competitions in the school's robotics lab
                                 that I joined during my undergraduate years</p>
                             <!-- <div class="main_button">
                                 <a href="#contact">If you are interested, Get in Touch With Me</a>
@@ -1035,7 +1051,9 @@
                                         </p>
                                         <p> Author: <strong>Zixuan He</strong>, Xiaoxu Li, Tianze Che </p>
                                         <br>
-                                        <a class="btn btn-warning" href="https://francis-press.com/uploads/papers/kdA1h7f0IkEl19iSYt9sLCQoq1l0Sp0rHdHgHw2e.pdf" role="button" target="_blank">
+                                        <a class="btn btn-warning"
+                                           href="https://francis-press.com/uploads/papers/kdA1h7f0IkEl19iSYt9sLCQoq1l0Sp0rHdHgHw2e.pdf"
+                                           role="button" target="_blank">
                                             <b>Download paper here</b>
                                         </a>
                                     </div>
@@ -1058,7 +1076,9 @@
                                         <p class="lead"> Published in <i>IEEE</i>, 2022 </p>
                                         <p> Author: Songyu Deng, <strong>Zixuan He</strong>, Meng Niu </p>
                                         <br>
-                                        <a class="btn btn-warning" href="https://francis-press.com/uploads/papers/kdA1h7f0IkEl19iSYt9sLCQoq1l0Sp0rHdHgHw2e.pdf" role="button" target="_blank">
+                                        <a class="btn btn-warning"
+                                           href="https://francis-press.com/uploads/papers/kdA1h7f0IkEl19iSYt9sLCQoq1l0Sp0rHdHgHw2e.pdf"
+                                           role="button" target="_blank">
                                             <b>Download paper here</b>
                                         </a>
                                     </div>
@@ -1085,311 +1105,108 @@
 
                 <!-- Service Section -->
                 <section class="service" id="service">
-
                     <!-- Main Title -->
                     <div class="main_title center">
                         <div class="container max880">
                             <h3>Services</h3>
-                            <p>I help ambitious businesses like yours generate more profits by building awareness,
-                                driving web traffic, connecting with customers and growing overall sales. My only
-                                working rule is that I don't work through agencies, I prefer to communicate directly
-                                with clients.</p>
                         </div>
                     </div>
                     <!-- /Main Title -->
+                    <div class="container">
 
-                    <!-- Boxed List -->
-                    <div class="fn_cs_boxed_list modern">
-                        <div class="container max1020">
-                            <ul>
-                                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                        <div class="blog_list">
+                            <ul class="gallery_zoom">
+                                <li>
                                     <div class="item">
-                                        <div class="badge">
-                                            <p>Starts From</p>
-                                            <h5>$500</h5>
+                                        <div class="left_part">
+                                            <div class="img_holder">
+                                                <a class="zoom" href="/img/services/img6.jpg"></a>
+                                                <img src="/img/services/img6.jpg" alt=""/>
+                                                <div class="abs_img" data-bg-img="/img/services/img6.jpg"></div>
+                                            </div>
                                         </div>
-                                        <h3>Web &amp; Product Design</h3>
-                                        <p>From low-fidelity wireframing and prototyping to a final coded design. We
-                                            don't just hand off static designs, but enjoy working directly in the
-                                            browser (♥ CSS) as much as with design tools such a <a class="fn__link"
-                                                                                                   href="#">Figma</a>.
-                                            We use can also setup complete sites in <a class="fn__link" href="#">Statamic</a>
-                                            and <a class="fn__link" href="#">Kirby</a> and work alongside front-end
-                                            developers to provide a complete service.</p>
+                                        <div class="right_part">
+                                            <div class="title">
+                                                <h3><a class="fn__link zoom" href="/img/services/img6.jpg">Volunteering
+                                                    in hospitals during the epidemic</a></h3>
+                                                <p>September 2021</p>
+                                            </div>
+                                            <div class="main_button">
+                                                <a class="zoom" href="/img/services/img6.jpg">Continue Reading</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
-                                <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <li>
                                     <div class="item">
-                                        <div class="badge">
-                                            <p>Starts From</p>
-                                            <h5>$450</h5>
+                                        <div class="left_part">
+                                            <div class="img_holder">
+                                                <a class="zoom" href="/img/services/img4.jpg"></a>
+                                                <img src="/img/services/img4.jpg" alt=""/>
+                                                <div class="abs_img" data-bg-img="/img/services/img4.jpg"></div>
+                                            </div>
                                         </div>
-                                        <h3>Brand Identity</h3>
-                                        <p>From a single logomark to <a class="fn__link" href="#">a full branding
-                                            system</a>. A brand new logo may not be the answer for you, we strongly
-                                            believe in refining and updating existing logos to increase effectiveness
-                                            without losing brand equity.</p>
+                                        <div class="right_part">
+                                            <div class="title">
+                                                <h3><a class="fn__link zoom" href="/img/services/img4.jpg">Participating
+                                                    in the voluntary sector on campus</a></h3>
+                                                <p>May 24. 2021</p>
+                                            </div>
+                                            <div class="main_button">
+                                                <a class="zoom" href="/img/services/img4.jpg">Continue Reading</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
-                                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <li class="be_animated">
                                     <div class="item">
-                                        <div class="badge">
-                                            <p>Starts From</p>
-                                            <h5>$200</h5>
+                                        <div class="left_part">
+                                            <div class="img_holder">
+                                                <a class="zoom" href="/img/services/img8.png"></a>
+                                                <img src="/img/services/img8.png" alt=""/>
+                                                <div class="abs_img" data-bg-img="/img/services/img8.png"></div>
+                                            </div>
                                         </div>
-                                        <h3>Iconography</h3>
-                                        <p>This is a speciality of ours, and we have worked with Skype, Spotify and
-                                            Dyson (to name just a few). The process of reducing an idea to it's
-                                            simplest, but still recognisable form is joyous!</p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s">
-                                    <div class="item">
-                                        <div class="badge">
-                                            <p>Starts From</p>
-                                            <h5>$150</h5>
+                                        <div class="right_part">
+                                            <div class="title">
+                                                <h3><a class="fn__link zoom" href="/img/services/img8.png">My
+                                                    Hobbies</a></h3>
+                                                <p>
+                                                    ● playing badminton <br>
+                                                    ● running <br>
+                                                    ● dancing
+                                                </p>
+                                            </div>
+                                            <div class="main_button">
+                                                <a class="zoom" href="/img/services/img8.png">Continue Reading</a>
+                                            </div>
                                         </div>
-                                        <h3>Print</h3>
-                                        <p>We come from a traditional print publishing background, starting in the last
-                                            days of paste up artwork.</p>
                                     </div>
                                 </li>
                             </ul>
+
+                            <div class="clearfix"></div>
+
+                            <div class="load_more">
+                                <a href="#" data-initial="Load More" data-loading="Loading..." data-done="Done"
+                                   data-no="No more items found">
+                                    <span class="text">Load More</span>
+                                    <span class="icon"></span>
+                                </a>
+                            </div>
+
                         </div>
-
+                        <!-- /Blog List -->
                     </div>
-                    <!-- /Boxed List -->
-
-
                 </section>
                 <!-- /Service Section -->
-
-                <!-- Scroll to next section -->
-                <div class="fn__next_section">
-                    <div class="container"><span></span></div>
-                    <a href="#">
-                        <img src="svg/right-arrow.svg" alt="" class="fn__svg"/>
-                        <span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-                    </a>
-                </div>
-                <!-- /Scroll to next section -->
-
-
-                <!-- Blog Section -->
-                <!--				<section class="blog" id="blog">-->
-
-
-                <!--					&lt;!&ndash; Main Title &ndash;&gt;-->
-                <!--					<div class="main_title center">-->
-                <!--						<div class="container max880">-->
-                <!--							<h3>News &amp; Tips</h3>-->
-                <!--						</div>-->
-                <!--					</div>-->
-                <!--					&lt;!&ndash; /Main Title &ndash;&gt;-->
-
-
-                <!--					<div class="container">-->
-                <!--						&lt;!&ndash; Blog List &ndash;&gt;-->
-                <!--						<div class="blog_list">-->
-                <!--							<ul class="gallery_zoom">-->
-                <!--								<li>-->
-                <!--									<div class="item">-->
-                <!--										<div class="left_part">-->
-                <!--											<div class="img_holder">-->
-                <!--												<a class="zoom" href="img/blog/1.jpg"></a>-->
-                <!--												<img src="img/thumb/square.jpg" alt="" />-->
-                <!--												<div class="abs_img" data-bg-img="img/blog/1.jpg"></div>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="right_part">-->
-                <!--											<div class="title">-->
-                <!--												<h3><a class="fn__link zoom" href="img/blog/1.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>-->
-                <!--												<p>September 25. 2021</p>-->
-                <!--											</div>-->
-                <!--											<div class="main_button">-->
-                <!--												<a class="zoom" href="img/blog/1.jpg">Continue Reading</a>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--									</div>-->
-                <!--								</li>-->
-                <!--								<li>-->
-                <!--									<div class="item">-->
-                <!--										<div class="left_part">-->
-                <!--											<div class="img_holder">-->
-                <!--												<a class="zoom" href="img/blog/2.jpg"></a>-->
-                <!--												<img src="img/thumb/square.jpg" alt="" />-->
-                <!--												<div class="abs_img" data-bg-img="img/blog/2.jpg"></div>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="right_part">-->
-                <!--											<div class="title">-->
-                <!--												<h3><a class="fn__link zoom" href="img/blog/2.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>-->
-                <!--												<p>September 25. 2021</p>-->
-                <!--											</div>-->
-                <!--											<div class="main_button">-->
-                <!--												<a class="zoom" href="img/blog/2.jpg">Continue Reading</a>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--									</div>-->
-                <!--								</li>-->
-                <!--								<li class="be_animated">-->
-                <!--									<div class="item">-->
-                <!--										<div class="left_part">-->
-                <!--											<div class="img_holder">-->
-                <!--												<a class="zoom" href="img/blog/3.jpg"></a>-->
-                <!--												<img src="img/thumb/square.jpg" alt="" />-->
-                <!--												<div class="abs_img" data-bg-img="img/blog/3.jpg"></div>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="right_part">-->
-                <!--											<div class="title">-->
-                <!--												<h3><a class="fn__link zoom" href="img/blog/3.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>-->
-                <!--												<p>September 25. 2021</p>-->
-                <!--											</div>-->
-                <!--											<div class="main_button">-->
-                <!--												<a class="zoom" href="img/blog/3.jpg">Continue Reading</a>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--									</div>-->
-                <!--								</li>-->
-                <!--								<li class="be_animated">-->
-                <!--									<div class="item">-->
-                <!--										<div class="left_part">-->
-                <!--											<div class="img_holder">-->
-                <!--												<a class="zoom" href="img/blog/4.jpg"></a>-->
-                <!--												<img src="img/thumb/square.jpg" alt="" />-->
-                <!--												<div class="abs_img" data-bg-img="img/blog/4.jpg"></div>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="right_part">-->
-                <!--											<div class="title">-->
-                <!--												<h3><a class="fn__link zoom" href="img/blog/4.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>-->
-                <!--												<p>September 25. 2021</p>-->
-                <!--											</div>-->
-                <!--											<div class="main_button">-->
-                <!--												<a class="zoom" href="img/blog/4.jpg">Continue Reading</a>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--									</div>-->
-                <!--								</li>-->
-                <!--							</ul>-->
-
-                <!--							<div class="clearfix"></div>-->
-
-                <!--							<div class="load_more">-->
-                <!--								<a href="#" data-initial="Load More" data-loading="Loading..." data-done="Done" data-no="No more items found">-->
-                <!--									<span class="text">Load More</span>-->
-                <!--									<span class="icon"></span>-->
-                <!--								</a>-->
-                <!--							</div>-->
-
-                <!--						</div>-->
-                <!--						&lt;!&ndash; /Blog List &ndash;&gt;-->
-                <!--					</div>-->
-
-                <!--				</section>-->
-                <!-- /Blog Section -->
-
-
-                <!-- Scroll to next section -->
-                <div class="fn__next_section">
-                    <div class="container"><span></span></div>
-                    <a href="#">
-                        <img src="svg/right-arrow.svg" alt="" class="fn__svg"/>
-                        <span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-                    </a>
-                </div>
-                <!-- /Scroll to next section -->
-
-
-                <!-- Contact Section -->
-                <!--				<section class="contact" id="contact">-->
-
-                <!--					&lt;!&ndash; Main Title &ndash;&gt;-->
-                <!--					<div class="main_title center">-->
-                <!--						<div class="container max880">-->
-                <!--							<h3>Contact</h3>-->
-                <!--						</div>-->
-                <!--					</div>-->
-                <!--					&lt;!&ndash; /Main Title &ndash;&gt;-->
-
-                <!--					&lt;!&ndash; Contact &ndash;&gt;-->
-                <!--					<div class="rewall_fn_contact">-->
-                <!--						<div class="container max880">-->
-
-                <!--							&lt;!&ndash; Contact Form &ndash;&gt;-->
-                <!--							<form class="contact_form" action="/" method="post" autocomplete="off" data-email="frenifyteam@gmail.com">-->
-
-                <!--								&lt;!&ndash;-->
-                <!--								 	Don't remove below code in avoid to work contact form properly.-->
-                <!--									You can chance dat-success value with your one. It will be used when user will try to contact via contact form and will get success message.-->
-                <!--								&ndash;&gt;-->
-                <!--								<div class="success" data-success="Your message has been received, we will contact you soon."></div>-->
-                <!--								<div class="empty_notice"><span>Please Fill Required Fields!</span></div>-->
-                <!--								&lt;!&ndash; &ndash;&gt;-->
-
-                <!--								<div class="items_wrap">-->
-                <!--									<div class="items">-->
-                <!--										<div class="item half">-->
-                <!--											<div class="input_wrapper">-->
-                <!--												<input id="name" type="text" />-->
-                <!--												<span class="moving_placeholder">Name *</span>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="item half">-->
-                <!--											<div class="input_wrapper">-->
-                <!--												<input id="email" type="email" />-->
-                <!--												<span class="moving_placeholder">Email *</span>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="item">-->
-                <!--											<div class="input_wrapper">-->
-                <!--												<input id="phone" type="phone" />-->
-                <!--												<span class="moving_placeholder">Phone</span>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="item">-->
-                <!--											<div class="input_wrapper">-->
-                <!--												<textarea id="message"></textarea>-->
-                <!--												<span class="moving_placeholder">Message</span>-->
-                <!--											</div>-->
-                <!--										</div>-->
-                <!--										<div class="item">-->
-                <!--											<a id="send_message" href="http://www.bootstrapmb.com">Send Message</a>-->
-                <!--										</div>-->
-                <!--									</div>-->
-                <!--								</div>-->
-                <!--							</form>-->
-                <!--							&lt;!&ndash; /Contact Form &ndash;&gt;-->
-
-
-                <!--							&lt;!&ndash; Contact Info &ndash;&gt;-->
-                <!--							<div class="fn_cs_contact_info">-->
-                <!--								<p>Address</p>-->
-                <!--								<h3>69 Queen St, London, United Kingdom</h3>-->
-                <!--								<p>Phone</p>-->
-                <!--								<h3><a href="tel:+7068980751">(+706) 898-0751</a></h3>-->
-                <!--								<p><a class="fn__link" href="/cdn-cgi/l/email-protection#294f5b4c47404f505d4c4844694e44484045074a4644"><span class="__cf_email__" data-cfemail="553327303b3c332c21303438153238343c397b363a38">[email&#160;protected]</span></a></p>-->
-                <!--							</div>-->
-                <!--							&lt;!&ndash; /Contact Info &ndash;&gt;-->
-
-
-                <!--						</div>-->
-                <!--					</div>-->
-                <!--					&lt;!&ndash; /Contact &ndash;&gt;-->
-
-                <!--				</section>-->
-                <!-- /Contact Section -->
-
-
             </div>
         </div>
         <!-- Main Content -->
-
     </div>
     <!-- /Wrapper -->
-
 </div>
+
 <!-- /Wrapper All -->
 
 

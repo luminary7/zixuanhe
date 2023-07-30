@@ -1,78 +1,78 @@
 /*
  * Copyright (c) 2021 Frenify
- * 更多精品模板：http://www.bootstrapmb.com
+ * 锟斤拷锟洁精品模锟藉：http://www.bootstrapmb.com
  * This file is made for CURRENT TEMPLATE
 */
 
 
 (function($){
   "use strict";
-  
-  
+
+
 	var Rewall = {
-		
+
 		root: $(':root'),
-		
+
 		/* collect all functions for next initialization */
 		init: function(){
 			/* Set background image from data attribute */
 			Rewall.BgImg();
-			
+
 			/* Change image into SVG */
 			Rewall.imgToSVG();
-			
+
 			/* Navigation Resize */
 			Rewall.navigation__resize();
-			
+
 			/* Navigation Closer */
 			Rewall.navigation__closer();
-			
+
 			/* Smooth Scroll to next section */
 			Rewall.scrollToNextSection();
-			
+
 			/* Parallax Effect for about shortcode */
 			Rewall.about__parallax();
-			
+
 			/* Parallax Effect for about shortcode */
 			Rewall.tabs();
-			
+
 			/* Progress Bar */
 			Rewall.progress();
-			
+
 			/* Isotope Masonry */
 			Rewall.isotope();
-			
+
 			/* Owl Carousel for Testimonials */
 			Rewall.testimonial();
-			
+
 			/* Load More Blog Posts in Blog List */
 			Rewall.loadBlogPosts();
-			
+
 			/* Contact Form */
 			Rewall.contactForm();
-			
+
 			/* Moving Placeholder for Contact Form */
 			Rewall.movingPlaceholder();
-			
+
 			/* cv button hover */
 			Rewall.cvHover();
-			
+
 			/* magnific popup */
 			Rewall.magnific();
-			
+
 			/* wow effect for the whole site */
 			Rewall.wow();
-			
+
 			/* scroll to anchor */
 			Rewall.scrollToAnchor();
-			
+
 			/* color sceme */
 			Rewall.colorScheme();
-			
+
 			/* mobile menu opener with hamburger */
 			Rewall.mobileMenuOpener();
 		},
-		
+
 		mobileMenuOpener: function(){
 			var hamburger		= $('.rewall_fn_mobilemenu_wrap .hamburger');
 			hamburger.on('click',function(){
@@ -87,9 +87,9 @@
 					menupart.addClass('opened');
 					menupart.slideDown(500);
 				}return false;
-			});	
+			});
 		},
-		
+
 		colorScheme: function(){
 			var scheme 		= $('.rewall_fn_color_scheme');	// color scheme
 			var items 		= scheme.find('.item'); 		// all website items
@@ -99,26 +99,26 @@
 			var max			= Math.ceil(count/perpage);		// total page number
 			var button 		= scheme.find('[data-color]');	// all colors buttons
 			var opener		= scheme.find('.opener');		// opener
-			var mainColor	= '--main-color';				// 
-			var textColor	= '--text-color-for-main-bg';	// 
+			var mainColor	= '--main-color';				//
+			var textColor	= '--text-color-for-main-bg';	//
 			var activeColor = Rewall.root.css(mainColor).replace(/\s+/g, '');	// detect main color to change it in next functions
-			
-			
+
+
 			// set all colors as background
 			button.each(function(){
 				$(this).css({backgroundColor: $(this).attr('data-color')});
 			});
-			
-			
+
+
 			// set current pagination
 			scheme.find('.current').text(page);
 			scheme.find('.separator').text('/');
 			scheme.find('.total').text(max);
-			
+
 			// disable all items since perpage+1 child
 			items.eq(perpage-1).nextAll().addClass('disabled');
-			
-			
+
+
 			// pagination
 			scheme.find('.my__nav a').off().on('click',function(){
 				var element = $(this);
@@ -134,7 +134,7 @@
 				scheme.find('.current').text(page);
 				return false;
 			});
-			
+
 			// select color
 			button.on('click',function(){
 				var element = $(this);
@@ -150,7 +150,7 @@
 				}
 				return false;
 			});
-			
+
 			var time = null;
 			opener.off().on('click',function(e){
 				e.preventDefault();
@@ -188,7 +188,7 @@
 				scheme.removeClass('opened');
 			});
 		},
-		
+
 		setTextColor: function(color,textColor){
 			if (Rewall.returnLuma(color) < 60) {
 				Rewall.root.css(textColor,'#fff');
@@ -196,7 +196,7 @@
 				Rewall.root.css(textColor,'#000');
 			}
 		},
-		
+
 		returnLuma: function(hex){
 			var c 		= hex.substring(1);		// strip #
 			var rgb 	= parseInt(c, 16);		// convert rrggbb to decimal
@@ -206,7 +206,7 @@
 			var luma 	= 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
 			return luma;
 		},
-		
+
 		scrollToAnchor: function(){
 			$('.main_button a').on('click',function(){
 				var element = $(this);
@@ -215,15 +215,15 @@
 				}
 			});
 		},
-		
+
 		wow: function(){
 			new WOW({
 				callback: function(box){
 					$(box).addClass('done');
 				}
-			}).init();	
+			}).init();
 		},
-		
+
 		magnific: function(){
 			$('.gallery_zoom').each(function() { // the containers for all your galleries
 				var zoom 			= $(this);
@@ -237,26 +237,26 @@
 					items: galleryItems,
 				});
 
-			});	
+			});
 		},
-		
+
 		magnificItems: function(zoom){
 			var GalleryItems = [];
 			zoom.find('.zoom').each(function(){
 				var element = $(this),
 					src 	= element.attr('href'),
 					title 	= element.attr('data-title');
-				
+
 				if(!title || typeof (title) === 'undefined'){title = '';}
-				
-				var collection = { 
+
+				var collection = {
 					src: src,
 					type: 'image',
 					title: title,
 				};
 				GalleryItems.push(collection);
 			});
-			
+
 			GalleryItems = GalleryItems.reduce(function(previous, current) {
 				var object = previous.filter(object => object.src === current.src && object.title === current.title);
 				if (object.length === 0) {
@@ -264,10 +264,10 @@
 				}
 				return previous;
 			}, []);
-			
+
 			return GalleryItems;
 		},
-		
+
 		cvHover: function(){
 			$('.fn_cs_cv_btn a').on('mouseenter',function(){
 				$(this).closest('.fn_cs_cv_btn').addClass('hovered');
@@ -275,7 +275,7 @@
 				$(this).closest('.fn_cs_cv_btn').removeClass('hovered');
 			});
 		},
-		
+
 		movingPlaceholder: function(){
 			$('.rewall_fn_contact .input_wrapper').each(function(){
 				var e		= $(this);
@@ -288,7 +288,7 @@
 				});
 			});
 		},
-		
+
 		contactForm: function(){
 			$('#send_message').on('click', function(){
 				var form		= $('.rewall_fn_contact .contact_form');
@@ -316,7 +316,7 @@
 						}, function(data) {
 							spanSuccess.append(data);
 							if(spanSuccess.find(".contact_error").length){
-								spanSuccess.slideDown(500).delay(2000).slideUp(500);		
+								spanSuccess.slideDown(500).delay(2000).slideUp(500);
 							}else{
 								spanSuccess.append("<span class='contact_success'>" + success + "</span>");
 								spanSuccess.slideDown(500).delay(4000).slideUp(500);
@@ -325,10 +325,10 @@
 						}
 					);
 				}
-				return false; 
+				return false;
 			});
 		},
-		
+
 		loadBlogPosts: function(){
 			$('.blog_list .load_more a').on('mousedown',function(){
 				var element 	= $(this);
@@ -361,11 +361,11 @@
 			$('.blog_list .load_more a').on('click',function(){
 				var element 	= $(this);
 				var text 		= element.find('.text');
-				
+
 				// stop function if elements are loading right now
 				if(element.hasClass('loading') || element.hasClass('done')){return false;}
 				element.addClass('loading');
-				
+
 				var time 		= null;
 				var loadingText = element.attr('data-loading');
 				var array 		= loadingText.split('');
@@ -376,7 +376,7 @@
 					newText+= array[i];
 					Rewall.search_placeholder(text,newText,i,speed);
 				}
-				
+
 				time = setInterval(function(){
 					newText = '';
 					for(var i=0;i<count;i++){
@@ -384,37 +384,37 @@
 						Rewall.search_placeholder(text,newText,i,speed);
 					}
 				},speed*count);
-				
-				
-				
+
+
+
 				setTimeout(function(){
 					clearInterval(time);
 					element.removeClass('loading');
 				},speed*count*1.9);
-				
+
 				setTimeout(function(){
 					var listItem = element.closest('.blog_list').find('.be_animated');
 					listItem.each(function(i, e){
 						setTimeout(function(){
 							$(e).addClass('fadeInTop done');
-						}, (i*100));	
+						}, (i*100));
 					});
 					element.addClass('done');
 					text.text(element.attr('data-done'));
 				},speed*count*2);
-				
-				
+
+
 				return false;
 			});
 		},
-		
+
 		search_placeholder: function(text,newText,i,speed){
 			setTimeout(function(){
 				text.text(newText);
 			},i*speed);
 		},
-		
-		
+
+
 		testimonial: function(){
 			var owl 		= $('.fn_cs_testimonials .owl-carousel');
 			owl.each(function(){
@@ -449,8 +449,8 @@
 			Rewall.imgToSVG();
 			Rewall.BgImg();
 		},
-		
-		
+
+
 		isotope: function(){
 			var masonry = $('.fn__masonry');
 			if($().isotope){
@@ -462,14 +462,14 @@
 				});
 			}
 		},
-		
+
 		progress: function(){
 			$('.fn_cs_progress_bar').each(function() {
 				var pWrap 	= $(this);
 				pWrap.waypoint({handler: function(){Rewall.progressF(pWrap);},offset:'90%'});
 			});
 		},
-		
+
 		progressF: function(container){
 			container.find('.progress_item').each(function(i) {
 				var progress 	= $(this);
@@ -481,16 +481,16 @@
 					progress.addClass('open');
 					percent.html(pValue+'%').css({right:(100 - pValue)+ '%'});
 				},(i*500));
-			});	
+			});
 		},
-		
+
 		recallProgress: function(tabs){
 			tabs.find('.progress_bg').css({width:'0%'});
 			tabs.find('.progress_percent').html('').css({right:'100%'});
 			tabs.find('.progress_item').removeClass('open');
 			Rewall.progress();
 		},
-		
+
 		tabs: function(){
 			$('.fn_cs_tabs .tab_header a').off().on('click',function(){
 				var e 			= $(this);
@@ -505,18 +505,18 @@
 					$(e.attr('href')).addClass('active');
 					Rewall.recallProgress(tabs);
 				}
-				
+
 				return false;
 			});
 		},
-		
+
 		about__parallax: function(){
 			$('#scene').parallax();
 		},
-		
+
 		scrollToNextSection: function(){
 			var DELAY = 300, clicks = 0, timer = null, arrowAnimationTime = 300, scrollAnimationTime = 700;
-			
+
 			$(".fn__next_section a").on("click", function(){
 				var btn			= $(this);
 				var section		= btn.closest('.fn__next_section');
@@ -526,7 +526,7 @@
 				if(clicks === 1) {
 
 					timer = setTimeout(function() {
-						
+
 						topOffset = section.next().offset().top;
 						$("html, body").animate({ scrollTop: topOffset-40}, scrollAnimationTime);
 						clicks = 0;             //after action performed, reset counter
@@ -536,19 +536,19 @@
 				} else {
 
 					clearTimeout(timer);    //prevent single-click action
-					
+
 					section.addClass('reverse');
-					
-					
+
+
 					setTimeout(function() {
 						section.removeClass('reverse');
 					}, scrollAnimationTime + arrowAnimationTime);
-					
+
 					setTimeout(function() {
 						topOffset = section.prev().offset().top;
 						$("html, body").animate({ scrollTop: topOffset-40}, scrollAnimationTime);
 					}, arrowAnimationTime);
-					
+
 					clicks = 0;             //after action performed, reset counter
 					return false;
 				}
@@ -558,7 +558,7 @@
 			});
 
 		},
-		
+
 		navigation__closer: function(){
 			var wrapper		= $('.rewall_fn_wrapper_all');
 			$('.rewall_fn_sidebar .nav__button').off().on('click',function(){
@@ -571,11 +571,11 @@
 					Rewall.isotope();
 					Rewall.testimonial();
 				},500);
-				
+
 				return false;
 			});
 		},
-		
+
 		navigation__resize: function(){
 			var isResizing 	= false,
 				lastDownX 	= 0;
@@ -610,8 +610,8 @@
 				Rewall.isotope();
 			});
 		},
-		
-		
+
+
 		imgToSVG: function(){
 			$('img.fn__svg').each(function(){
 				var img 		= $(this);
@@ -627,7 +627,7 @@
 
 				}, 'xml');
 
-			});	
+			});
 		},
 
 	  	BgImg: function(){
@@ -649,39 +649,39 @@
 			});
 		},
   	};
-  	
-	
+
+
 	// READY Functions
 	$(document).ready(function(){
-		
+
 		Rewall.init();
-		
+
 	});
-	
+
 	// RESIZE Functions
 	$(window).on('resize',function(){
-		
+
 		Rewall.isotope();
-		
+
 	});
-	
-	
-	
+
+
+
 	// LOAD Functions
 	$(window).on('load',function(){
-		
-		
+
+
 		setTimeout(function(){
 			Rewall.isotope();
 		},10);
-		
+
 	});
-	
+
 	// SCROLL Functions
 	$(window).on('scroll',function(){
-		
+
 	});
-  
+
 })(jQuery);
 
 jQuery('.anchor_nav').onePageNav();

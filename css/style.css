@@ -661,7 +661,7 @@ section{
 }
 .main_title p a{
 	color: #000;
-	text-decoration: none;
+	/*text-decoration: none;*/
 }
 .main_title p a:hover{
 	color: var(--main-color)
