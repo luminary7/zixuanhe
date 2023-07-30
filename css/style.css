@@ -1145,42 +1145,42 @@ section{
 }
 
 
-.portfolio{
+.experience{
 	padding: 171px 0 84px;
 }
-.portfolio .main_title{
+.experience .main_title{
 	margin-bottom: 100px;
 }
-/* Portfolio List */
-.portfolio_list ul{
+/* Experience List */
+.experience_list ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	margin-left: -60px;
 }
-.portfolio_list li{
+.experience_list li{
 	margin: 0;
 	padding: 0;
 	width: 50%;
 	padding-left: 60px;
 	margin-bottom: 95px;
 }
-.portfolio_list .item{
+.experience_list .item{
 	display: flex;
 	flex-direction: column;
 }
-.portfolio_list li:nth-of-type(2n) .item{
+.experience_list li:nth-of-type(2n) .item{
 	flex-direction: column-reverse;
 }
-.portfolio_list li:nth-of-type(2n) .title_holder{
+.experience_list li:nth-of-type(2n) .title_holder{
 	margin-bottom: 0;
 	margin-top: 34px;
 }
-.portfolio_list .img_holder img{
+.experience_list .img_holder img{
 	opacity: 0;
 	min-width: 100%;
 }
-.portfolio_list .img_holder a{
+.experience_list .img_holder a{
 	z-index: 10;
 	position: absolute;
 	top: 0;
@@ -1188,12 +1188,12 @@ section{
 	right: 0;
 	bottom: 0;
 }
-.portfolio_list .img_holder{
+.experience_list .img_holder{
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 }
-.portfolio_list .abs_img{
+.experience_list .abs_img{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1206,29 +1206,29 @@ section{
 	transition: all 1s ease;
 	transform: scale(1.2);
 }
-.portfolio_list .img_holder:hover .abs_img{
+.experience_list .img_holder:hover .abs_img{
 	transform: scale(1);
 }
-.portfolio_list .title_holder{
+.experience_list .title_holder{
 	text-align: center;
 }
-.portfolio_list .title_holder h3{
+.experience_list .title_holder h3{
 	margin: 0;
 	padding: 0;
 	margin-bottom: 8px;
 }
-.portfolio_list .title_holder h3 a{
+.experience_list .title_holder h3 a{
 	text-decoration: none;
 	font-weight: 600;
 	color: #000;
 	position: relative;
 }
-.portfolio_list .title_holder p{
+.experience_list .title_holder p{
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
 }
-.portfolio_list .title_holder{
+.experience_list .title_holder{
 	margin-bottom: 33px;
 }
 
@@ -1997,8 +1997,8 @@ section{
 	.fn_cs_testimonials .name{padding-right: 100px;}
 	.blog_list .left_part{padding-right: 20px;}
 	.blog_list .right_part{padding-left: 20px;}
-	.portfolio_list ul{margin-left: -40px;}
-	.portfolio_list li{padding-left: 40px;margin-bottom: 35px;}
+	.experience_list ul{margin-left: -40px;}
+	.experience_list li{padding-left: 40px;margin-bottom: 35px;}
 	.fn_cs_info_items li{font-size: 20px;}
 	.fn_cs_testimonials .desc p{font-size: 20px;line-height: 1.5;}
 	.fn_cs_about_modern .dots{top: 60px !important;bottom: 60px !important;}
@@ -2016,7 +2016,7 @@ section{
 	/* Section spacing */
 	.about{padding: 100px 0 82px;}
 	.biography{padding: 75px 0 82px;}
-	.portfolio{padding: 75px 0 84px;}
+	.experience{padding: 75px 0 84px;}
 	.service{padding: 75px 0 62px;}
 	.customer{padding: 75px 0 82px;}
 	.blog{padding: 75px 0 82px;}
@@ -2032,9 +2032,9 @@ section{
 	.fn_cs_about_modern .row{flex-direction: column;}
 	.fn_cs_about_modern .left_part{width: 70%;padding-right: 0;margin-bottom: 50px;}
 	.fn_cs_about_modern .right_part{width: 100%;}
-	.portfolio_list li{width: 100%;}
-	.portfolio_list li:nth-of-type(2n) .item{flex-direction: column;}
-	.portfolio_list li:nth-of-type(2n) .title_holder{margin-top: 0;margin-bottom: 33px;}
+	.experience_list li{width: 100%;}
+	.experience_list li:nth-of-type(2n) .item{flex-direction: column;}
+	.experience_list li:nth-of-type(2n) .title_holder{margin-top: 0;margin-bottom: 33px;}
 	.fn_cs_boxed_list.modern li:nth-of-type(2n+1){padding-right: 0;}
 	.fn_cs_boxed_list.modern li:nth-of-type(2n){padding-left: 0;}
 	.fn_cs_boxed_list.modern li{margin-bottom: 20px;}
